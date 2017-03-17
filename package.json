@@ -16,9 +16,9 @@
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor protractor.config.js",
     "pretest": "npm run build:test",
-    "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
+    "test": "karma start karma.conf.js --single-run",
     "pretest:once": "npm run build:test",
-    "test:once": "karma start karma.conf.js --single-run",
+    "test:watch": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
   "keywords": [],
