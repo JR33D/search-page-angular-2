@@ -1,7 +1,10 @@
 # search-page-angular-2
-Sample search page done in angular 2. This project was to practice and showcase some work I've done with angular 2 to potential employers.
+Sample search page done in angular 2. This project was to practice and showcase some work I've done with angular 2.
 
-[![Build Status](https://travis-ci.org/JR33D/search-page-angular-2.svg?branch=master)](https://travis-ci.org/JR33D/search-page-angular-2)
+[![Build Status](https://travis-ci.org/JR33D/search-page-angular-2.svg)](https://travis-ci.org/JR33D/search-page-angular-2)
+
+[![dependencies Status](https://david-dm.org/JR33D/search-page-angular-2/status.svg)](https://david-dm.org/JR33D/search-page-angular-2)
+[![devDependencies Status](https://david-dm.org/JR33D/search-page-angular-2/dev-status.svg)](https://david-dm.org/JR33D/search-page-angular-2?type=dev)
 
 ## To run project
 clone repository or download code to your machine.
