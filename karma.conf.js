@@ -4,8 +4,8 @@ module.exports = function(config) {
   var appSrcBase = appBase;      // app source TS files
 
   // Testing helpers (optional) are conventionally in a folder called `testing`
-  var testingBase    = 'testing/'; // transpiled test JS and map files
-  var testingSrcBase = 'testing/'; // test source TS files
+  var testingBase    = 'src/tests/specs/'; // transpiled test JS and map files
+  var testingSrcBase = testingBase; // test source TS files
 
   config.set({
     basePath: '',
@@ -72,9 +72,7 @@ module.exports = function(config) {
 
       // Paths for debugging with source maps in dev tools
       { pattern: appBase + '**/*.ts', included: false, watched: false },
-      { pattern: appBase + '**/*.js.map', included: false, watched: false },
-      { pattern: testingSrcBase + '**/*.ts', included: false, watched: false },
-      { pattern: testingBase + '**/*.js.map', included: false, watched: false}
+      { pattern: testingSrcBase + '**/*.ts', included: false, watched: false }
     ],
 
     // Proxied base paths for loading assets

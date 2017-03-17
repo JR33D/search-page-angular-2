@@ -1,30 +1,64 @@
 <div class="container">
     <h1>Search for a Person</h1>
-    <fieldset>
+    <fieldset class="search">
         <legend>Search:</legend>
         <span>
             <label for="firstName">First Name:</label> 
-            <input id="firstName" type="text" [(ngModel)]="firstName">
+            <input id="firstName" type="text" [(ngModel)]="searchFirstName">
         </span>
         <span>
             <label for="lastName">Last Name:</label> 
-            <input id="lastName" type="text" [(ngModel)]="lastName">
+            <input id="lastName" type="text" [(ngModel)]="searchLastName">
+        </span>
+        <span>
+            <label for="phoneNumber">Phone Number:</label>
+            <input id="phoneNumber" type="text" [(ngModel)]="searchPhoneNumber">
+        </span>
+        <span>
+            <button (click)="search()" type="button">Search</button>
         </span>
     </fieldset>
-    <div id="searchResults">
+    <div id="searchResults" class="datagrid">
         <p *ngIf="allPeople.length < 1">There are no results matching that query!</p>
         <table *ngIf="allPeople.length > 0" class="table table-bordered">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone Number</th>
-            </tr>
-            <tr *ngFor="let person of allPeople">
-                <td>{{ person.firstName }}</td>
-                <td>{{ person.lastName }}</td>
-                <td>{{ person.phoneNumber }}</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <div id="paging">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>Previous</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                                <li>
+    								<a href="#">
+    									<span>Next</span>
+    								</a>
+    							</li>
+    						</ul>
+					    </div>
+                    </td>
+				</tr>
+			</tfoot>
+			<tbody>
+                <tr *ngFor="let person of allPeople; let index=index; let odd=odd;" [ngClass]="{ alt: odd }">
+                    <td>{{ person.firstName }}</td>
+                    <td>{{ person.lastName }}</td>
+                    <td>{{ person.phoneNumber }}</td>
+                </tr>
+			</tbody>
+		</table>
+	</div>
