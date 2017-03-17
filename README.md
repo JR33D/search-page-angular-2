@@ -11,7 +11,7 @@ All testing for the application can be found under the `src/app/testing` folder.
 
 To run the e2e test run the command `npm e2e`. This will build, server and run the application, webdriver-manager and the e2e tests. Results of e2e test are output to the `_test-output` folder that isn't checked into git.
 
-To run the unit test run the command `npm test`. This will build the application and specs folder code and open chrome to display results.
+To run the unit test run the command `npm test`. This will build the application and specs folder code and run the tests against PhantomJS.
 
 ## Things to do
 This code originally came from the quick-start available on Angular's website. So it does include items like testing and e2e test using protractor that are on a todo list to continue showcasing all skils around angular develop life cycle.
