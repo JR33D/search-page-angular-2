@@ -28,5 +28,7 @@ describe('AppComponent', function () {
   });
 
   it('should create component', () => expect(comp).toBeDefined() );
+  
+  it('should fail', () => expect(true).toEqual(false));
 
 });
